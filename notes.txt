@@ -1,0 +1,13 @@
+## odpalenie kontenera z bazą danych w PostgreSQL
+docker run --rm --name shop-nextjs-docker -e POSTGRES_PASSWORD=docker -d -p 5432:5432 -v $HOME/docker/volumes/postgres:/var/lib/postgresql/data postgres
+
+## łączenie z bazą
+psql -h localhost -U postgres -d postgres
+
+## Linki
+https://hackernoon.com/dont-install-postgres-docker-pull-postgres-bee20e200198
+https://docs.docker.com/desktop/windows/wsl/#develop-with-docker-and-wsl-2
+https://www.timescale.com/blog/how-to-install-psql-on-mac-ubuntu-debian-windows/
+
+## uruchomienie bazy danych
+docker-compose up -d
