@@ -8,3 +8,6 @@ psql -h localhost -U postgres -d postgres
 https://hackernoon.com/dont-install-postgres-docker-pull-postgres-bee20e200198
 https://docs.docker.com/desktop/windows/wsl/#develop-with-docker-and-wsl-2
 https://www.timescale.com/blog/how-to-install-psql-on-mac-ubuntu-debian-windows/
+
+## uruchomienie bazy danych
+docker-compose up -d

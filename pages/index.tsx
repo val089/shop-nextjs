@@ -5,6 +5,11 @@ import styles from '@/styles/Home.module.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
+const createUser = async () => {
+  const response = await fetch('/api/createUser');
+  console.log(response);
+};
+
 export default function Home() {
   return (
     <>
@@ -21,6 +26,7 @@ export default function Home() {
             <code className={styles.code}>pages/index.tsx</code>
           </p>
           <div>
+            <button onClick={() => void createUser()}>CREATE USER</button>
             <a
               href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
               target="_blank"
