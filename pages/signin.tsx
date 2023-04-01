@@ -7,9 +7,7 @@ export default function SignIn() {
   const { data, status } = useSession();
   const router = useRouter();
 
-  const handleGithubLogin = async (e: MouseEvent) => {
-    setSigning(true);
-    e.preventDefault();
+  const handleGithubLogin = async () => {
     setSigning(true);
     await signIn('github');
     setSigning(false);
@@ -27,7 +25,8 @@ export default function SignIn() {
 
   return (
     <div style={{ width: '100%', height: '100vh' }}>
-      <button onClick={(e) => void handleGithubLogin(e)}>SIGN IN</button>
+      {/* eslint-disable-next-line @typescript-eslint/no-misused-promises */}
+      <button onClick={handleGithubLogin}>SIGN IN</button>
     </div>
   );
 }
