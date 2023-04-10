@@ -10,6 +10,11 @@ const createUser = async () => {
   console.log(response);
 };
 
+const updateUser = async () => {
+  const response = await fetch('/api/updateUser');
+  console.log(response);
+};
+
 export default function Home() {
   const [signing, setSigning] = useState(false);
 
@@ -43,7 +48,10 @@ export default function Home() {
           </div>
         </div>
       </header>
-      <main>{/* <button onClick={() => void createUser()}>CREATE USER</button> */}</main>
+      <main>
+        <Button onClick={() => void createUser()}>CREATE USER</Button>
+        <Button onClick={() => void updateUser()}>UPDATE USER</Button>
+      </main>
     </>
   );
 }

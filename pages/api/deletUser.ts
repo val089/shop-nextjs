@@ -1,16 +1,14 @@
-import { NextApiHandler } from 'next';
 import prisma from '@/prisma';
+import { NextApiHandler } from 'next';
 
 const handler: NextApiHandler = async (req, res) => {
   try {
-    const user = await prisma.user.create({
-      data: {
-        name: 'Jan',
-        email: 'jankowalski@gmail.com',
+    await prisma.user.delete({
+      where: {
+        id: 'clfy9hjvs0002v8p0titbt756',
       },
     });
-
-    return res.status(200).json(user);
+    return res.status(200).json({ message: 'success' });
   } catch (error) {
     console.log(error);
     return res.status(500).json(error);

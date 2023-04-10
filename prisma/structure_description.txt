@@ -1,0 +1,5 @@
+migrations
+  timestamp_version-name ==> 20230322180350_version01
+
+
+  Migracje opisują każdą zrobioną zmianę przez członka zespołu, najlepiej żeby migracja była nazywana nazwą pól które dodaliśmy
