@@ -60,3 +60,14 @@ model VerificationToken {
   @@unique([identifier, token])
   @@map("verificationtokens")
 }
+
+model Product {
+  id          String @id
+  title       String
+  price       Int
+  description String
+  category    String
+  image       String
+
+  @@map("product")
+}
